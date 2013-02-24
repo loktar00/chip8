@@ -1,0 +1,12 @@
+body{width:100%;background:url(images/mirrored_squares.png);}
+h1{color:#0f0f0f;}
+#main{
+	width:640px;
+	margin:0 auto;
+	margin-top:50px;
+}
+#screen{
+	-moz-box-shadow:    2px 2px 10px 3px #0f0f0f;
+ 	-webkit-box-shadow: 2px 2px 10px 3px #0f0f0f;
+  	box-shadow:         2px 2px 10px 3px #0f0f0f;
+}

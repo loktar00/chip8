@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JS Chip 8 Emulator</title>
+		<link rel="stylesheet" href="style.css"></link>
+	</head>
+	<body>
+		<div id="main">
+			<h1>Chip-8 Emulator by Jason Brown</h1>
+			<canvas id="screen" style="border:1px solid #000"></canvas>
+		</div>
+		<script src="chip8.js"></script>
+		<script>
+			(function() {
+			  var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+			                              window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+			  window.requestAnimationFrame = requestAnimationFrame;
+			})();
+ 
+			var chip = new chip8();
+
+            document.addEventListener("keydown", function(e) {
+                chip.keys[chip.keyMap[e.keyCode]] = true;
+                chip.currentKey = chip.keyMap[e.keyCode];
+            });
+
+            document.addEventListener("keyup", function(e) {
+                chip.keys[chip.keyMap[e.keyCode]] = false;
+                chip.currentKey = false;
+            });
+
+
+			function loadRom(){
+				// Load a rom.
+				var xhr = new XMLHttpRequest;
+				xhr.open("GET", "roms/Chip8 Picture.ch8", true);
+				xhr.responseType = "arraybuffer";
+
+				xhr.onload = function () {
+				   var rom = new Uint8Array(xhr.response);
+				   chip.loadRom(rom);
+				};
+
+				xhr.send();
+			}
+
+			loadRom();
+		</script>
+	</body>
+</html>
