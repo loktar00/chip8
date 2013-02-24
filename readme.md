@@ -3,6 +3,7 @@ Chip-8 Emulator
 
 Wanted to get into the world of emulation and figured I would start with one of the easiest chips out there to emulate, the chip-8.
 
+[See it in action](http://loktar00.github.com/chip8/)
 
 Invaluable Resources
 -----------------------
@@ -14,5 +15,5 @@ Invaluable Resources
 ### Things that still need to be done
 
 - 	Implement the ability to change roms.
--	Implement a reset button.
+-	  Implement a reset button.
 -   There is currently a nasty bug I am trying to track down. not 100% sure where its occuring.
