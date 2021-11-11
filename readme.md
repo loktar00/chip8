@@ -3,7 +3,7 @@ Chip-8 Emulator
 
 Wanted to get into the world of emulation and figured I would start with one of the easiest chips out there to emulate, the chip-8.
 
-[See it in action](http://loktar00.github.com/chip8/)
+[See it in action](http://loktar00.github.io/chip8/)
 
 Invaluable Resources
 -----------------------
